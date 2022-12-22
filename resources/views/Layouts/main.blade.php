@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     {{-- link icon gambar header --}}
     <link rel="icon" href="{{ asset('assets/images/icons/logo.png') }}">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+    />
 
     {{-- link template admin --}}
 
@@ -66,6 +71,13 @@
     <script async defer src="{{ asset('https://buttons.github.io/buttons.js') }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('assets/js/argon-dashboard.min.js?v=2.0.0') }}"></script>
+
+     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#table_id").DataTable();
+      });
+    </script>
 
 
 </body>

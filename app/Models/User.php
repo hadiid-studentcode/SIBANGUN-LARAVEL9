@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
     ];
@@ -44,6 +45,6 @@ class User extends Authenticatable
 
 
     public function Pemilik(){
-        return $this->hasMany('App\Models\Pemilik');
+        return $this->hasMany(Pemilik::class);
     }
 }

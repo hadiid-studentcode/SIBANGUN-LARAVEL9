@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -6,6 +7,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BarangmasukController;
 use App\Http\Controllers\CetakController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PemilikController;
 use App\Http\Controllers\SuppliersController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UsermanagementController;
@@ -41,6 +43,9 @@ Route::resource('/admin/barangmasuk', BarangmasukController::class)->middleware(
 Route::resource('/admin/transaksi',TransaksiController::class)->middleware('auth');
 Route::get('/admin/cetak',[CetakController::class,'index'])->middleware('auth');
 Route::resource('/admin/usermanagement', UsermanagementController::class)->middleware('auth');
+
+
+Route::resource('/admin/pemilik', PemilikController::class)->middleware('auth');
 
 
 

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Suplier;
+use App\Models\Pemilik;
 
 
 
@@ -32,6 +33,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Suplier::factory(10)->create();
+
+        Pemilik::create([
+            'nama' => 'Hadiid Andri Yulison',
+            'alamat' => 'jalan cipta karya',
+            'notlp' => '089620569613',
+            'id_user'=> '11'
+        ]);
 
        
 

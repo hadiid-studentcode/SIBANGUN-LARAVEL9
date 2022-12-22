@@ -9,7 +9,14 @@ class Pemilik extends Model
 {
     use HasFactory;
 
-    public function users(){
-        return $this->belongsTo('App\Models\User');
+    protected $table = 'pemiliks';
+
+    protected $fillable = [
+        'nama', 'alamat', 'notlp', 'id_user'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user');
     }
 }
